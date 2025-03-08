@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Kanit:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Afacad Flux", serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #1E1D23;
+    flex-direction: column;
+    height: 100vh; 
+
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    color: #b666e7;
+    margin-bottom: 30px;
+}
+
+.chargement { 
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-card {
+    background: #27262F;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.user-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 20px;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1; 
+}
+
+.user-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-top-and-avatar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; /
+}
+
+.user-top {
+    font-size: 50px;
+    font-weight: bold;
+    color: #A020F0;
+}
+
+.user-info-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1px;
+}
+
+.user-info-name h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #b666e7;
+}
+
+.user-info-name p {
+    margin: 1px 0 0;
+    color: #666;
+}
+
+.user-info-level {
+    text-align: right;
+    min-width: 120px;
+}
+
+.user-info-level p {
+    margin: 0;
+    font-weight: bold;
+    color: #b666e7;
+    font-size: 25px;
+}
+
+sup {
+    font-size: 25px;
+}
+
+svg {
+    fill: #A020F0;
+    stroke: #A020F0;
+    width: 20px;
+    height: auto;
+}
+
+.user-progress {
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #666;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background: #A020F0;  
+    width: 0%;
+    transition: width 0.5s ease;
+    position: relative; 
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+    font-size: 0.8em;
+}
+
+.bubble {
+    position: absolute;
+    bottom: 0;
+    background: #e88eff;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    opacity: 0.8;
+    animation: bubbleUp 2s infinite;
+}
+
+@keyframes bubbleUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-20px) scale(0.5);
+        opacity: 0;
+    }
+}
+
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 14px;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+button {
+    background-color: #b666e7; 
+    color: #1E1D23;          
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 1em;
+}
+
+button:hover {
+    background-color: #A020F0; 
+}
+
+button:active {
+    transform: scale(0.95); 
+}
+
+.error-message {
+    border: 2px solid #ff0202;
+    border-radius: 8px;
+    background-color: rgba(245, 66, 66, 0.5);
+    text-align: center;
+    color: white;
+    margin-bottom: 1em;
+}
+
+.search-container {
+    display: flex;
+}
+  
+.search-input {
+    padding: 10px 15px; 
+    font-size: 16px;
+    border: 2px solid #5A5A66;
+    border-radius: 8px;
+    outline: none;
+    width: 300px; 
+    background-color: #27262F;
+    color: #FFFFFF;
+    transition: border-color 0.3s ease;
+    margin: auto;
+}
+  
+.search-input:focus {
+    border-color: #A020F0;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classement XP - Dolti</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" href="https://yt3.googleusercontent.com/mH5EoGvjAf28i07U9CKryzy5KVpHWLDRvD4InxiX5QuSbxIucBIYBtBjtPQRJulimNkdQ-dLMA=s160-c-k-c0x00ffffff-no-rj" type="image/x-icon"/>
+</head>
+<body>
+
+    <main>
+
+        <h1>Classement d'expérience</h1>
+
+        <button class="wiki-btn" onclick="window.location.href='./wiki';">
+            Comment est-ce que ça marche ?
+        </button>        
+        
+        <div class="search-container">
+            <input id="texte" type="text" class="search-input" placeholder="🔎 Chercher un utilisateur">
+            <button onclick="">
+                🔎 Chercher l'utilisateur
+            </button> 
+        </div>
+
+        <div class="user-container" id="userContainer">
+            <p class="chargement">Chargement en cours. Veuillez patienter</p>
+        </div>
+        
+        <div class="user-container-saison" id="userContainerSaison" style="display: none;">
+            <p class="chargement">Chargement en cours. Veuillez patienter</p>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

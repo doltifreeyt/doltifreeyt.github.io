@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 Wiki - Système d'Expérience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../sidebar.css">
+</head>
+<body>
+
+    <main>
+        <header>
+            <h1>🚀 Système d'Expérience</h1>
+        
+        
+        <button class="btn" onclick="window.location.href='../';">
+        Visiter le classement
+        </button>
+
+            <section id="presentation">
+                <h2>📖 Présentation</h2>
+                <p>
+                    Le système d'expérience est un mécanisme qui permet aux utilisateurs de progresser en accumulant des points d'expérience (XP) ! 🎮✨<br>
+                    Plus vous gagnez d'XP, plus vous montez dans le classement ! 📈🏆<br>
+                    Découvrez le classement saisonnier, réinitialisé chaque 1er du mois.<br>
+                    Grimpez-y pour décrocher des récompenses exclusives ! 🎁🔥
+                </p>     
+            </section>
+
+            <section id="gain">
+                <h2>💡 Comment gagner de l'XP ?</h2>
+                <p>
+                    📩 Chaque message envoyé vous rapporte de l'XP !<br>
+                    Plus il est long, plus vous gagnez d'XP.<br>
+                    📊 Testez combien d'XP vous pourriez obtenir :
+                </p>
+                <div class="search-container">
+                    <input id="texte" type="text" class="search-input" placeholder="✍️ Tapez votre message ici..." oninput="convertTexte()">
+                </div>
+                <p id="texteInfo">🧐 Attente d'un message...</p>
+            </section>
+
+            <section id="niveaux">
+                <h2>🏆 Niveaux</h2>
+                <p>
+                    🎯 Plus vous accumulez d'XP, plus vous montez de niveau !<br>
+                    🔢 Découvrez combien d'XP il vous manque pour passer au niveau suivant :
+                </p>
+                <div class="search-container">
+                    <input id="level" type="number" min="1" step="1" class="search-input" placeholder="🔢 Niveau actuel" oninput="convert(); this.value = this.value.replace(/[^0-9]/g, '')">
+                </div>
+                <p id="levelInfo">📈 En attente d'un niveau...</p>
+            </section>
+    </main>
+    
+    <script src="script.js"></script>
+    <script src="../../sidebar.js"></script>
+
+</body>
+</html>
